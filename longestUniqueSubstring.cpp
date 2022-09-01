@@ -1,10 +1,10 @@
-#include <algorithm>
 #include <iostream>
+#include <algorithm>
 #include <bits/stdc++.h>
 
 using namespace std;
 
-int longestUniqueString(string str)
+int longestUniqueSubstring(string str)
 {
     int n = str.size();
     int res = 0;
@@ -23,13 +23,13 @@ int longestUniqueString(string str)
                 visited[str[j]] = true;
             }
         }
-        // visited[str[i]] = false;
     }
     return res;
 }
+
 int main()
 {
-    string s = "hello";
-    cout << longestUniqueString(s) << endl;
+    string str = "pwwkew";
+    cout << longestUniqueSubstring(str) << endl;
     return 0;
 }
