@@ -1,35 +1,35 @@
 #include <algorithm>
 #include <iostream>
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 
 using namespace std;
-int lengthOfLongestSubstring(string str)
+
+int longestUniqueString(string str)
 {
     int n = str.size();
     int res = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; ++i)
     {
         vector<bool> visited(256);
-
-        for (int j = i; j < n; j++)
+        for (int j = i; j < n; ++j)
         {
             if (visited[str[j]] == true)
+            {
                 break;
+            }
             else
             {
                 res = max(res, j - i + 1);
                 visited[str[j]] = true;
             }
         }
-        visited[str[i]] = false;
+        // visited[str[i]] = false;
     }
     return res;
 }
-
 int main()
 {
-    // Your code goes here;
-    string s = "race";
-    cout << lengthOfLongestSubstring(s) << endl;
+    string s = "hello";
+    cout << longestUniqueString(s) << endl;
     return 0;
 }

@@ -1,1 +1,1 @@
-cout << endl;
+visited[str[i]] = false;
