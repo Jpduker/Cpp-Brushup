@@ -17,7 +17,8 @@ int main()
     {
         for (int col = 0; col < 2; col++)
         {
-            cout << arr[row][col] << " ";
+            cout << arr[row][col] << " " << endl;
         }
     }
+    return 0;
 }
