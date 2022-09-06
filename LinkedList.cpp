@@ -34,6 +34,23 @@ public:
             Head = newNode;
         }
     }
+    void insertNodeEnd(int data)
+    {
+        Node *newNode = new Node();
+        newNode->data = data;
+        newNode->next = NULL;
+        if (Head == NULL)
+        {
+            Head = newNode;
+            Tail = newNode;
+            return;
+        }
+        else
+        {
+            Tail->next = newNode;
+            Tail = Tail->next;
+        }
+    }
 };
 
 int main()
