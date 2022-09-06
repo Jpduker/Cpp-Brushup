@@ -1,0 +1,10 @@
+To insert a element(node) at the begining of a linked list 
+step 1:A class should be created with Head and Tail as member variables.
+step 2: An object must be initialized using a constructor,and head and tail should be assigned to NULL.
+step 3: Implement a helper method(function) which will take the data(value) as the parameter.
+step 4: This helper method will create a newNode using the node class and set the newNode's value to the value 
+        passed in as a parameter, the next pointer will remain Null.
+step 5: If the head of the linkedList is NULL initially, then the LinkedList was empty and the
+        newNode will be the first Node to be inserted, hence the head and tail pointer will point to newNode.
+step 6: If the head pointer was not Null, then make the newNode's next to point to head,and the head pointer will 
+        point to the newNode.
