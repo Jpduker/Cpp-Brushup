@@ -1,4 +1,5 @@
 To insert a element(node) at the begining of a linked list 
+
 step 1: A class should be created with Head and Tail as member variables.
 step 2: An object must be initialized using a constructor,and head and tail should be assigned to NULL.
 step 3: Implement a helper method(function) which will take the data(value) as the parameter.
@@ -14,3 +15,16 @@ To insert a element(node) at the End of a linked list,
 step 1 to step 5 is same as above.
 step 6: If the head pointer is not Null, then make the Tail pointer's next to point to the newNode.
 step 7: Also update the Tail pointer to previous Tail pointer's next because its the newNode which has become the new Tail.
+
+To insert a Node at any position in the LinkedList,
+
+step 1 : Implement a helper method with (int pos,int data) as the params and initialize two reference variables prev,current
+         to help with traversals. initialize a newNode and set its data and next points respectively.
+step 2 : Check if the position is <1, if so then reurn invalid position. Check if the pos==1, if so then its same 
+         as inserting a newNode at the front, just make the newNode's next to point to Head(previous) and then update
+         the Head pointer to point to the newNode.
+step 3 : If any of the conditions is false, then loop through the ll until you reach the desired pos, update prev with current,
+         and update current with current.next .
+step 4 : If current. next is NULL while traversal, then print invalid position.
+step 5 : When the loop reaches the desired postion , make the prev's next pointer to point to the newNode and newNode's 
+         next pointer to point to current pointer.
