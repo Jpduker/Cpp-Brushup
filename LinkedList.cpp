@@ -85,6 +85,32 @@ public:
             newNode->next = current;
         }
     }
+
+    void search(int data)
+    {
+        Node *current = Head;
+        while (current != NULL)
+        {
+            if (current->data == data)
+            {
+                cout << "The element" << data << "is found." << endl;
+                return;
+            }
+            current = current->next;
+        }
+
+        cout << "The element " << data << "was not found" << endl;
+    }
+
+    void displayNodeElements()
+    {
+        Node *current = Head;
+        while (Head != NULL)
+        {
+            cout << current->data << " ";
+            current = current->next;
+        }
+    }
 };
 
 int main()
@@ -94,4 +120,8 @@ int main()
     lst.insertNodeFront(30);
     lst.insertNodeFront(40);
     lst.insertNodeFront(50);
+    lst.insertNodePos(3, 10);
+    lst.insertNodeEnd(5);
+    lst.displayNodeElements();
+    lst.search(5);
 }
