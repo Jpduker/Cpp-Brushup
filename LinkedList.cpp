@@ -20,5 +20,8 @@ public:
 
     void insertNodeFront(int data)
     {
+        Node *newNode = new Node();
+        newNode->data = data;
+        newNode->next = NULL;
     }
 };
