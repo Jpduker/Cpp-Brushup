@@ -7,3 +7,18 @@ public:
     int data;
     Node *next;
 };
+
+class LindedList
+{
+public:
+    Node *Head, *Tail;
+    LindedList()
+    {
+        Head = NULL;
+        Tail = NULL;
+    }
+
+    void insertNodeFront(int data)
+    {
+    }
+};
