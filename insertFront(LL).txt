@@ -8,3 +8,9 @@ step 5: If the head of the linkedList is NULL initially, then the LinkedList was
         newNode will be the first Node to be inserted, hence the head and tail pointer will point to newNode.
 step 6: If the head pointer was not Null, then make the newNode's next to point to head,and the head pointer will 
         point to the newNode.
+
+To insert a element(node) at the End of a linked list,
+
+step 1 to step 5 is same as above.
+step 6: If the head pointer is not Null, then make the Tail pointer's next to point to the newNode.
+step 7: Also update the Tail pointer to previous Tail pointer's next because its the newNode which has become the new Tail.

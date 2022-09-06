@@ -51,6 +51,40 @@ public:
             Tail = Tail->next;
         }
     }
+
+    void insertNodePos(int pos, int data)
+    {
+        Node *current = new Node();
+        Node *prev = new Node();
+        current = Head;
+        Node *newNode = new Node();
+        newNode->data = data;
+        newNode->next = NULL;
+        if (pos < 1)
+        {
+            cout << "Invalid position" << endl;
+        }
+        else if (pos == 1)
+        {
+            newNode->next = Head;
+            Head = newNode;
+        }
+        else
+        {
+            for (int i = 0; i < pos; ++i)
+            {
+                prev = current;
+                current = current->next;
+                if (current == NULL)
+                {
+                    cout << "Invalid Position" << endl;
+                    return;
+                }
+            }
+            prev->next = newNode;
+            newNode->next = current;
+        }
+    }
 };
 
 int main()
