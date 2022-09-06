@@ -1,5 +1,5 @@
 To insert a element(node) at the begining of a linked list 
-step 1:A class should be created with Head and Tail as member variables.
+step 1: A class should be created with Head and Tail as member variables.
 step 2: An object must be initialized using a constructor,and head and tail should be assigned to NULL.
 step 3: Implement a helper method(function) which will take the data(value) as the parameter.
 step 4: This helper method will create a newNode using the node class and set the newNode's value to the value 
