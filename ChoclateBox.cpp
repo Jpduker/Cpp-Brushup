@@ -1,31 +1,40 @@
 #include <iostream>
 using namespace std;
-
-void choclateBox()
-{
-    int n;
-    cout << "Enter the no of Boxes: ";
-    cin >> n;
-    int nc;
-    int Choclates[n];
-    for (int i = 1; i < n + 1; i++)
-    {
-        cout << "Enter the no of choclates in Box " << i << ": ";
-        cin >> nc;
-
-        if (nc % 2 == 0)
-        {
-            Choclates[i] = nc;
-        }
-    }
-    cout << "Num of choclates in each boxes are:  " << endl;
-    for (int j = 1; j < n + 1; j++)
-    {
-
-        cout << Choclates[j] << " ";
-    }
-}
 int main()
 {
-    choclateBox();
+
+    cout << "\nEnter the no. of boxes: ";
+    int n, flag = 0;
+    cin >> n; // 5
+    if (n > 0 && n <= 10)
+    {
+        int a[n];
+        for (int i = 0; i < n; i++)
+        {
+            cout << "\nEnter the no. of chocolates in box " << i + 1 << ":";
+            cin >> a[i]; // 42 3 6 1
+            if (i == 0 && a[i] % 2 != 0)
+            {
+                cout << "\nSorry !!! The first box always should contain positive even no. of chocolates";
+                return 0;
+            }
+            else
+            {
+                if (a[i] % 2 == 0)
+                {           // 4%2==0 2%2 == 0 3%2!=0 6%2 == 0_1%2!=0
+                    flag++; // flag=1 flag=2 flag=3
+                }
+            }
+        }
+        cout << "\nNo. of chocolates in each box: ";
+        for (int i = flag - 1; i < n; i++)
+        {                        // i = 2 to 4 (3 times)
+            cout << a[i] << " "; // 3 6 1
+        }
+    }
+    else
+    {
+        cout << "\nInvalid input";
+    }
+    return 0;
 }
