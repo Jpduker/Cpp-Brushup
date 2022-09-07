@@ -86,20 +86,20 @@ public:
         }
     }
 
-    void search(int data)
+    void search(int value)
     {
         Node *current = Head;
         while (current != NULL)
         {
-            if (current->data == data)
+            if (current->data == value)
             {
-                cout << "The element" << data << "is found." << endl;
+                cout << "The element " << value << " is found." << endl;
                 return;
             }
             current = current->next;
         }
 
-        cout << "The element " << data << "was not found" << endl;
+        cout << "The element " << value << " was not found" << endl;
     }
 
     void displayNodeElements()
